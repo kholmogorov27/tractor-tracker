@@ -6,6 +6,7 @@
     <title>Document</title>
     <!-- <link rel="stylesheet" href="style.css"> -->
     <link rel="stylesheet" href="css/tractor.min.css">
+    <script src="https://api-maps.yandex.ru/3.0/?apikey=0be509ab-df0a-435f-bdd5-23f4ebe32b85&lang=ru_RU"></script>
 </head>
 <body>
     <header class="header">
@@ -13,8 +14,8 @@
         <img src="images/tractor.png" alt="tractor_logo" class="project_logo">
     </header>
     <div class="map_and_time">
-        <div class="map_wrapper">
-            map
+        <div id="map" class="map_wrapper" >
+            
         </div>
         <div class="time_wrapper">
             <div class="time_now">
@@ -45,13 +46,8 @@
         </div>
         <button class="btn" disabled>BUTTON1</button>
     </div>
-    <script>
-        (g=>{var h,a,k,p="The Google Maps JavaScript API",c="google",l="importLibrary",q="__ib__",m=document,b=window;b=b[c]||(b[c]={});var d=b.maps||(b.maps={}),r=new Set,e=new URLSearchParams,u=()=>h||(h=new Promise(async(f,n)=>{await (a=m.createElement("script"));e.set("libraries",[...r]+"");for(k in g)e.set(k.replace(/[A-Z]/g,t=>"_"+t[0].toLowerCase()),g[k]);e.set("callback",c+".maps."+q);a.src=`https://maps.${c}apis.com/maps/api/js?`+e;d[q]=f;a.onerror=()=>h=n(Error(p+" could not load."));a.nonce=m.querySelector("script[nonce]")?.nonce||"";m.head.append(a)}));d[l]?console.warn(p+" only loads once. Ignoring:",g):d[l]=(f,...n)=>r.add(f)&&u().then(()=>d[l](f,...n))})({
-          key: "YOUR_API_KEY_HERE",
-          // Add other bootstrap parameters as needed, using camel case.
-          // Use the 'v' parameter to indicate the version to load (alpha, beta, weekly, etc.)
-        });
-      </script>
-    <script src="js/time.js"></script>
+    <!-- <script src="js/time.js"></script> -->
+    <script src="js/map.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
